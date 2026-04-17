@@ -7,7 +7,7 @@ from langchain_core.output_parsers import StrOutputParser
 from langchain_core.prompts import ChatPromptTemplate
 from langchain_core.runnables import RunnablePassthrough
 
-OPENAI_API_KEY = "sk_key_here"  # Pass key
+OPENAI_API_KEY = "sk_key_here"  # Enter Pass key here
 
 st.header("My First Chatbot")
 
