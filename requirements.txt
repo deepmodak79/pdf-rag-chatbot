@@ -1,3 +1,5 @@
 streamlit
 pdfplumber
 langchain-text-splitters
+langchain_openai
+langchain_community

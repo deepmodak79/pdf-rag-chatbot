@@ -1,6 +1,8 @@
 import pdfplumber
 import streamlit as st
 from langchain_text_splitters import RecursiveCharacterTextSplitter
+from langchain_openai import OpenAIEmbeddings, ChatOpenAI
+from langchain_community.vectorstores import FAISS
 
 st.header("My First Chatbot")
 
@@ -25,3 +27,12 @@ if file is not None:
 
     chunks = text_splitter.split_text(text)
     st.write(chunks)
+
+    #generating embedidings
+    embeddings= OpenAIEmbeddings(
+        model="text-embedding-3-small",
+        open_api_key ="your key"
+    )
+
+    #store embeddings in vector db
+    vector_store = FAISS.from_texts(chunks,embeddings)
